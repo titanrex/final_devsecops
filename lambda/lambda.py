@@ -20,7 +20,7 @@ region_name = os.environ.get("REGION", "us-east-1")
           )
 
 
-#token= "22lyl_8yoba93u0__1e7l70ft-6jnjv2"
+
 
 
 def lambda_handler(event,context):
