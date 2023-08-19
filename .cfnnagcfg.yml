@@ -10,3 +10,8 @@ RulesToSuppress:
   reason: Lambda functions should define ReservedConcurrentExecutions to reserve simultaneous executions
 - id: F1000
   reason: Missing egress rule means all traffic is allowed outbound.  Make this explicit if it is desired configuration
+- name: Insecure Cloudformation patterns
+  uses: stelligent/cfn_nag@master
+  with:
+    input_path: cfn
+    extra_args: --fail-on-warnings --deny-list-path .cfnnagcfg.yml
